@@ -145,6 +145,12 @@ nav .pill{margin-left:auto;min-height:40px;padding:0 18px;font-size:15px;white-s
 .optk span{border:1px solid var(--line);border-radius:9999px;padding:3px 10px;font-size:12px;color:var(--text)}
 .optk span.ok{color:var(--pass);border-color:#BFDCC7;font-weight:700}
 .cream{background:var(--cream)}
+.meet{display:flex;align-items:stretch;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px auto 0;max-width:820px;text-align:left}
+.meet>div{flex:1 1 260px;background:#FFFFFF;border:1px solid var(--line);border-radius:14px;padding:12px 16px;color:var(--ink);font-weight:500}
+.meet>div:last-child{background:var(--wash);border-color:#F2C6B6}
+.meet small{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:2px}
+.meet>span{align-self:center;color:var(--terra);font-size:20px}
+.pillx.good{background:var(--passwash);color:var(--pass)}
 /* ---------- sections ---------- */
 section{padding:84px 0}
 .pains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px;text-align:left}
@@ -191,8 +197,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <header class="hero center">
   <div class="wrap">
     <p class="eyebrow">AI design harness for architecture</p>
-    <h1>A self-improving AI harness that creates architectural designs within building codes.</h1>
-    <div class="shift"><s>Draw every line and volume</s><span aria-hidden="true">→</span><b>Define the standard</b></div>
+    <h1>Define the standard. The building follows.</h1>
+    <p class="lead" style="max-width:760px">A self-improving AI harness that creates architectural designs within building codes.</p>
 
     <div class="fit" id="fit">
       <div class="app" id="app" role="img" aria-label="ARCHLOOP interface concept: the architect talks to the AI on the left while the building is created and checked live on the right">
@@ -307,34 +313,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="case center">
   <div class="wrap">
-    <p class="eyebrow">Case 1 · Define the standard</p>
-    <h2>Your office standard, written once</h2>
-    <p class="lead">Say how your office builds. Every project starts from it.</p>
+    <p class="eyebrow">Case 1</p>
+    <h2>Barrier-free, met by iteration</h2>
+    <div class="meet"><div><small>Standard</small>Barrier-free to DIN 18040-1</div><span aria-hidden="true">→</span><div><small>The AI meets it by</small>Checking every round, fixing what fails, checking again</div></div>
     <div class="fit cfit">
       <div class="app sm capp" role="img" aria-label="Concept: the architect sets the office standard in a chat; the rules and style appear as a file">
-        <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span>clinic</span><span class="on">standard.md</span><span>rules/</span></div></div>
+        <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span>clinic</span><span class="on">plan</span><span>rules/ DIN 18040-1</span></div></div>
         <div class="body">
           <div class="chat">
             <div class="msgs">
-              <div class="m u">Our standard: barrier-free to DIN 18040-1, setbacks per MBO, timber where it can be, daylight in every waiting area.</div>
-              <div class="m a">Saved as your office standard. Each rule keeps its source, and I check every round against it.
-                <div class="k"><span>4 rules</span><span>1 style</span><span>applies to all projects</span></div>
-              </div>
+              <div class="m u">Standard: barrier-free to DIN 18040-1.</div>
+              <div class="m a">Round 1: <b class="f">23 of 48 checks fail.</b> Doors 850 mm, corridor 1300 mm. <span class="src">DIN 18040-1</span></div>
+              <div class="m a">Widened doors to 900 mm and the corridor to 1800 mm. Round 2: <b class="p">48 of 48 pass.</b></div>
             </div>
-            <div class="composer"><span class="caret"></span>Add a rule…</div>
+            <div class="composer"><span class="caret"></span>Ask for a change…</div>
           </div>
           <div class="viewport">
-            <span class="vt">standard.md</span>
-            <div class="doc">
-              <div class="dh">Rules</div>
-              <div class="dr"><span class="tog"></span>Doors ≥ 90 cm clear width<em>DIN 18040-1</em></div>
-              <div class="dr"><span class="tog"></span>Step-free routes to every room<em>DIN 18040-1</em></div>
-              <div class="dr"><span class="tog"></span>Setback 0.4 H, at least 3 m<em>MBO § 6</em></div>
-              <div class="dr"><span class="tog"></span>Every room at its brief area<em>Brief</em></div>
-              <div class="dh" style="margin-top:14px">Style</div>
-              <div class="chips2"><span>Timber</span><span>Calm</span><span>Daylight in waiting</span></div>
-              <div class="sw2"><i style="background:#D9C3A5"></i><i style="background:#EDE6DA"></i><i style="background:#9C8A70"></i><i style="background:#F6F1E8"></i></div>
-            </div>
+            <span class="vt">plan · ground floor</span>
+            <span class="pillx good">✓ 48 of 48 pass</span>
+            <svg viewBox="0 0 560 380" width="86%" class="center-svg" aria-hidden="true">
+              <rect x="60" y="60" width="440" height="250" fill="#FFFFFF" stroke="#1C1917" stroke-width="4"/>
+              <rect x="60" y="164" width="440" height="42" fill="#E7F2EA"/>
+              <line x1="60" y1="164" x2="500" y2="164" stroke="#1C1917" stroke-width="2.5"/><line x1="60" y1="206" x2="500" y2="206" stroke="#1C1917" stroke-width="2.5"/>
+              <line x1="170" y1="60" x2="170" y2="164" stroke="#1C1917" stroke-width="2.5"/><line x1="280" y1="60" x2="280" y2="164" stroke="#1C1917" stroke-width="2.5"/><line x1="390" y1="60" x2="390" y2="164" stroke="#1C1917" stroke-width="2.5"/>
+              <line x1="210" y1="206" x2="210" y2="310" stroke="#1C1917" stroke-width="2.5"/><line x1="360" y1="206" x2="360" y2="310" stroke="#1C1917" stroke-width="2.5"/>
+              <g fill="#FFFFFF" stroke="#2F6B3E" stroke-width="2.5"><rect x="100" y="159" width="34" height="10"/><rect x="210" y="159" width="34" height="10"/><rect x="320" y="159" width="34" height="10"/><rect x="420" y="159" width="34" height="10"/><rect x="120" y="201" width="34" height="10"/><rect x="270" y="201" width="34" height="10"/></g>
+              <text x="280" y="190" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="14" fill="#2F6B3E">corridor 1300 → 1800 mm</text>
+              <text x="117" y="146" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="12" fill="#2F6B3E">door 850 → 900</text>
+              <text x="135" y="262" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" fill="#57534E">waiting</text>
+            </svg>
           </div>
         </div>
       </div>
@@ -344,16 +351,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="case center cream">
   <div class="wrap">
-    <p class="eyebrow">Case 2 · AI generates and checks itself</p>
-    <h2>When a site cannot work, it says why</h2>
-    <p class="lead">No false pass. It names the rule, the number and what would have to change.</p>
+    <p class="eyebrow">Case 2</p>
+    <h2>Setbacks, met by generating within them</h2>
+    <div class="meet"><div><small>Standard</small>Setbacks per MBO § 6: 0.4 H, at least 3 m</div><span aria-hidden="true">→</span><div><small>The AI meets it by</small>Building only inside the buildable area, and saying so when it cannot</div></div>
     <div class="fit cfit">
       <div class="app sm capp" role="img" aria-label="Concept: on a plot that is too small the AI explains why the design cannot pass">
         <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span class="on">corner-plot</span><span>DESIGN.md</span><span>model.ifc</span></div></div>
         <div class="body">
           <div class="chat">
             <div class="msgs">
-              <div class="m u">Same clinic on the corner plot, 20 × 16 m.</div>
+              <div class="m u">Standard: setbacks per MBO § 6. Same clinic on the corner plot, 20 × 16 m.</div>
               <div class="m a"><b class="f">This site cannot work as briefed.</b> The double-loaded section needs 10,460 mm; the buildable depth after setbacks is 10,000 mm. <span class="src">MBO § 6</span></div>
               <div class="m a">I won't relax a rule. Change the layout idea or the brief, and I'll run it again.</div>
             </div>
@@ -385,16 +392,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section class="case center">
   <div class="wrap">
-    <p class="eyebrow">Case 3 · Visualised and finalised</p>
-    <h2>Compare options before the design is fixed</h2>
-    <p class="lead">Ask for a variant. It is built, checked and priced next to the first one.</p>
+    <p class="eyebrow">Case 3</p>
+    <h2>Timber and carbon, met in 3D options</h2>
+    <div class="meet"><div><small>Standard</small>Timber where it can be, compared on carbon</div><span aria-hidden="true">→</span><div><small>The AI meets it by</small>Generating each option in 3D, checked and priced side by side</div></div>
     <div class="fit cfit">
       <div class="app sm capp" role="img" aria-label="Concept: masonry and timber options compared side by side with checks, cost and carbon">
         <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span>clinic</span><span class="on">compare</span><span>model.ifc</span></div></div>
         <div class="body">
           <div class="chat">
             <div class="msgs">
-              <div class="m u">Compare masonry and timber.</div>
+              <div class="m u">Standard: timber where it can be. Compare it with masonry on carbon.</div>
               <div class="m a">Both pass all 203 checks. Timber has about 42% less carbon and about 2.6× the material cost. <span class="src">illustrative data</span></div>
               <div class="m u">Export both for the client meeting.</div>
               <div class="m a">Done.
