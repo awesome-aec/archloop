@@ -123,6 +123,28 @@ nav .pill{margin-left:auto;min-height:40px;padding:0 18px;font-size:15px;white-s
 }
 @media (max-width:700px){.stepsbar{grid-template-columns:minmax(0,1fr)}}
 
+/* ---------- three case screens (static) ---------- */
+.case .fit{margin-top:40px}
+.app.sm{height:520px}
+.doc{position:absolute;left:24px;right:24px;top:44px;bottom:20px;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:18px 20px;overflow:hidden}
+.dh{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet);font-weight:700;margin-bottom:8px}
+.dr{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:9px 2px}
+.dr em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;color:var(--terra);letter-spacing:.04em}
+.tog{width:26px;height:15px;border-radius:9999px;background:var(--pass);position:relative;flex:0 0 auto}
+.tog::after{content:"";position:absolute;right:2px;top:2px;width:11px;height:11px;border-radius:50%;background:#FFFFFF}
+.chips2{display:flex;gap:6px;flex-wrap:wrap}
+.chips2 span{border-radius:9999px;padding:5px 11px;background:var(--wash);color:var(--terra);font-weight:500}
+.sw2{display:flex;gap:6px;margin-top:12px}.sw2 i{flex:1 1 0;height:40px;border-radius:8px;display:block}
+.pillx{position:absolute;right:14px;top:10px;border-radius:9999px;padding:4px 14px;font-size:12px;font-weight:700}
+.pillx.bad{background:var(--wash);color:var(--terra)}
+.center-svg{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%)}
+.duo2{position:absolute;left:14px;right:14px;top:44px;bottom:14px;display:flex;gap:14px}
+.duo2>div{flex:1 1 0;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px}
+.optn{font-family:Fraunces,ui-serif,Georgia,serif;font-weight:600;font-size:17px;color:var(--ink)}
+.optk{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.optk span{border:1px solid var(--line);border-radius:9999px;padding:3px 10px;font-size:12px;color:var(--text)}
+.optk span.ok{color:var(--pass);border-color:#BFDCC7;font-weight:700}
+.cream{background:var(--cream)}
 /* ---------- sections ---------- */
 section{padding:84px 0}
 .pains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px;text-align:left}
@@ -282,6 +304,141 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </div>
 </section>
+
+<section class="case center">
+  <div class="wrap">
+    <p class="eyebrow">Case 1 · Define the standard</p>
+    <h2>Your office standard, written once</h2>
+    <p class="lead">Say how your office builds. Every project starts from it.</p>
+    <div class="fit cfit">
+      <div class="app sm capp" role="img" aria-label="Concept: the architect sets the office standard in a chat; the rules and style appear as a file">
+        <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span>clinic</span><span class="on">standard.md</span><span>rules/</span></div></div>
+        <div class="body">
+          <div class="chat">
+            <div class="msgs">
+              <div class="m u">Our standard: barrier-free to DIN 18040-1, setbacks per MBO, timber where it can be, daylight in every waiting area.</div>
+              <div class="m a">Saved as your office standard. Each rule keeps its source, and I check every round against it.
+                <div class="k"><span>4 rules</span><span>1 style</span><span>applies to all projects</span></div>
+              </div>
+            </div>
+            <div class="composer"><span class="caret"></span>Add a rule…</div>
+          </div>
+          <div class="viewport">
+            <span class="vt">standard.md</span>
+            <div class="doc">
+              <div class="dh">Rules</div>
+              <div class="dr"><span class="tog"></span>Doors ≥ 90 cm clear width<em>DIN 18040-1</em></div>
+              <div class="dr"><span class="tog"></span>Step-free routes to every room<em>DIN 18040-1</em></div>
+              <div class="dr"><span class="tog"></span>Setback 0.4 H, at least 3 m<em>MBO § 6</em></div>
+              <div class="dr"><span class="tog"></span>Every room at its brief area<em>Brief</em></div>
+              <div class="dh" style="margin-top:14px">Style</div>
+              <div class="chips2"><span>Timber</span><span>Calm</span><span>Daylight in waiting</span></div>
+              <div class="sw2"><i style="background:#D9C3A5"></i><i style="background:#EDE6DA"></i><i style="background:#9C8A70"></i><i style="background:#F6F1E8"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case center cream">
+  <div class="wrap">
+    <p class="eyebrow">Case 2 · AI generates and checks itself</p>
+    <h2>When a site cannot work, it says why</h2>
+    <p class="lead">No false pass. It names the rule, the number and what would have to change.</p>
+    <div class="fit cfit">
+      <div class="app sm capp" role="img" aria-label="Concept: on a plot that is too small the AI explains why the design cannot pass">
+        <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span class="on">corner-plot</span><span>DESIGN.md</span><span>model.ifc</span></div></div>
+        <div class="body">
+          <div class="chat">
+            <div class="msgs">
+              <div class="m u">Same clinic on the corner plot, 20 × 16 m.</div>
+              <div class="m a"><b class="f">This site cannot work as briefed.</b> The double-loaded section needs 10,460 mm; the buildable depth after setbacks is 10,000 mm. <span class="src">MBO § 6</span></div>
+              <div class="m a">I won't relax a rule. Change the layout idea or the brief, and I'll run it again.</div>
+            </div>
+            <div class="composer"><span class="caret"></span>Ask for a change…</div>
+          </div>
+          <div class="viewport">
+            <span class="vt">live model</span>
+            <span class="pillx bad">cannot converge</span>
+            <svg viewBox="0 0 560 380" width="88%" class="center-svg" aria-hidden="true">
+              <rect x="110" y="60" width="340" height="272" fill="#EFEADF" stroke="#A8A29E" stroke-width="1.2"/>
+              <rect x="161" y="111" width="238" height="170" fill="none" stroke="#B33F1F" stroke-width="1.2" stroke-dasharray="6 5"/>
+              <rect x="170" y="104" width="220" height="184" fill="#E3DED5" fill-opacity=".85" stroke="#78716C"/>
+              <rect x="170" y="104" width="220" height="7" fill="#B33F1F" fill-opacity=".55"/>
+              <rect x="170" y="281" width="220" height="7" fill="#B33F1F" fill-opacity=".55"/>
+              <line x1="470" y1="111" x2="470" y2="281" stroke="#57534E"/>
+              <text x="478" y="200" font-family="DM Sans, sans-serif" font-size="13" fill="#57534E">10,000</text>
+              <text x="478" y="216" font-family="DM Sans, sans-serif" font-size="11" fill="#78716C">buildable</text>
+              <line x1="92" y1="104" x2="92" y2="288" stroke="#B33F1F"/>
+              <text x="84" y="200" text-anchor="end" font-family="DM Sans, sans-serif" font-size="13" fill="#B33F1F">10,460</text>
+              <text x="84" y="216" text-anchor="end" font-family="DM Sans, sans-serif" font-size="11" fill="#B33F1F">needed</text>
+              <text x="280" y="352" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="12" fill="#78716C">plot 20 × 16 m · setback 3 m</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case center">
+  <div class="wrap">
+    <p class="eyebrow">Case 3 · Visualised and finalised</p>
+    <h2>Compare options before the design is fixed</h2>
+    <p class="lead">Ask for a variant. It is built, checked and priced next to the first one.</p>
+    <div class="fit cfit">
+      <div class="app sm capp" role="img" aria-label="Concept: masonry and timber options compared side by side with checks, cost and carbon">
+        <div class="tbar"><div class="dots"><i></i><i></i><i></i></div><div class="tabs"><span>clinic</span><span class="on">compare</span><span>model.ifc</span></div></div>
+        <div class="body">
+          <div class="chat">
+            <div class="msgs">
+              <div class="m u">Compare masonry and timber.</div>
+              <div class="m a">Both pass all 203 checks. Timber has about 42% less carbon and about 2.6× the material cost. <span class="src">illustrative data</span></div>
+              <div class="m u">Export both for the client meeting.</div>
+              <div class="m a">Done.
+                <div class="k"><span class="g">✓ plans</span><span class="g">✓ 3D views</span><span class="g">✓ IFC4</span></div>
+              </div>
+            </div>
+            <div class="composer"><span class="caret"></span>Ask for a change…</div>
+          </div>
+          <div class="viewport">
+            <span class="vt">compare</span>
+            <div class="duo2">
+              <div>
+                <svg viewBox="0 0 300 180" width="90%" aria-hidden="true">
+                  <polygon points="40,110 170,160 250,124 120,74" fill="#E7E5E4" stroke="#78716C"/>
+                  <polygon points="40,110 170,160 170,104 40,54" fill="#D6D3D1" stroke="#78716C"/>
+                  <polygon points="170,160 250,124 250,68 170,104" fill="#A8A29E" stroke="#78716C"/>
+                  <polygon points="40,54 170,104 250,68 120,18" fill="#F5F5F4" stroke="#78716C"/>
+                </svg>
+                <div class="optn">A · masonry</div>
+                <div class="optk"><span class="ok">✓ 203 checks</span><span>EUR 187 / m²</span><span>97.3 t CO2e</span></div>
+              </div>
+              <div>
+                <svg viewBox="0 0 300 180" width="90%" aria-hidden="true">
+                  <polygon points="40,110 170,160 250,124 120,74" fill="#E9DCCB" stroke="#78716C"/>
+                  <polygon points="40,110 170,160 170,104 40,54" fill="#D9C3A5" stroke="#78716C"/>
+                  <polygon points="170,160 250,124 250,68 170,104" fill="#C7AB86" stroke="#78716C"/>
+                  <polygon points="40,54 170,104 250,68 120,18" fill="#F2E8DA" stroke="#78716C"/>
+                  <g stroke="#9C8A70"><line x1="60" y1="92" x2="60" y2="68"/><line x1="85" y1="101" x2="85" y2="77"/><line x1="110" y1="111" x2="110" y2="87"/><line x1="135" y1="120" x2="135" y2="96"/></g>
+                </svg>
+                <div class="optn">B · timber</div>
+                <div class="optk"><span class="ok">✓ 203 checks</span><span>EUR 480 / m²</span><span>56.5 t CO2e</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){var fs=[].slice.call(document.querySelectorAll('.cfit'));
+  function fit(){fs.forEach(function(f){var a=f.firstElementChild,s=Math.min(1,f.clientWidth/1040);a.style.transform=s<1?'scale('+s+')':'';f.style.height=(520*s)+'px';});}
+  fit();window.addEventListener('resize',fit);})();
+</script>
 
 <section class="band center">
   <div class="wrap">
