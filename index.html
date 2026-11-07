@@ -45,88 +45,68 @@ nav .pill{margin-left:auto;min-height:40px;padding:0 18px;font-size:15px;white-s
 .shift s{color:var(--quiet)}
 .shift b{color:var(--terra)}
 
-/* ---------- product window: three screens on a 15 s loop ---------- */
+/* ---------- product window: chat + live model, 15 s loop ---------- */
 .fit{margin:52px auto 0;max-width:1040px;text-align:left}
 .app{width:1040px;height:600px;transform-origin:top left;background:#FFFFFF;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -30px rgba(28,25,23,.35);overflow:hidden;display:flex;flex-direction:column;font-size:13px}
-.tbar{height:42px;flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid var(--line);background:#FFFFFF}
+.tbar{height:40px;flex:0 0 auto;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid var(--line)}
 .dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:#E7E5E4;display:block}
-.tbar .ttl{font-weight:700;color:var(--ink)}.tbar .sub{color:var(--quiet)}
-.tbar .right{margin-left:auto;display:flex;gap:8px}
-.tag2{border:1px solid var(--line);border-radius:9999px;padding:3px 10px;font-size:12px;color:var(--text);background:#FFFFFF}
+.tabs{display:flex;gap:2px;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--quiet)}
+.tabs span{padding:4px 10px;border-radius:6px}
+.tabs span.on{background:var(--cream);color:var(--ink)}
 .body{flex:1 1 auto;display:flex;min-height:0}
-.side{width:196px;flex:0 0 auto;border-right:1px solid var(--line);background:var(--cream);padding:14px 10px;display:flex;flex-direction:column;gap:4px}
-.nav{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;color:var(--text);font-weight:500}
-.nav .n{width:22px;height:22px;border-radius:50%;border:1px solid #D6D3D1;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:#FFFFFF}
-.n1{animation:nav1 15s infinite}.n2{animation:nav2 15s infinite}.n3{animation:nav3 15s infinite}
-@keyframes nav1{0%,32%{background:#FFFFFF;color:var(--terra);box-shadow:0 1px 0 var(--line)}34%,100%{background:transparent;color:var(--text);box-shadow:none}}
-@keyframes nav2{0%,32%{background:transparent;color:var(--text);box-shadow:none}34%,65%{background:#FFFFFF;color:var(--terra);box-shadow:0 1px 0 var(--line)}67%,100%{background:transparent;color:var(--text);box-shadow:none}}
-@keyframes nav3{0%,65%{background:transparent;color:var(--text);box-shadow:none}67%,99%{background:#FFFFFF;color:var(--terra);box-shadow:0 1px 0 var(--line)}100%{background:transparent;color:var(--text)}}
-.files{margin-top:auto;border-top:1px solid var(--line);padding:12px 10px 0;color:var(--quiet);font-size:12px;line-height:1.9}
-.files b{display:block;color:var(--text);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
-.main{flex:1 1 auto;position:relative;min-width:0}
-.layer{position:absolute;inset:0;padding:18px;display:flex;gap:16px}
-.L1{animation:lay1 15s infinite both}.L2{animation:lay2 15s infinite both}.L3{animation:lay3 15s infinite both}
-@keyframes lay1{0%,31%{opacity:1;visibility:visible}33%,100%{opacity:0;visibility:hidden}}
-@keyframes lay2{0%,32%{opacity:0;visibility:hidden}34%,64%{opacity:1;visibility:visible}66%,100%{opacity:0;visibility:hidden}}
-@keyframes lay3{0%,65%{opacity:0;visibility:hidden}67%,97%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
-/* staged items */
-.s{animation:15s infinite both}
-.p1a{animation-name:p1a}.p1b{animation-name:p1b}.p1c{animation-name:p1c}.p1d{animation-name:p1d}.p1e{animation-name:p1e}.p1f{animation-name:p1f}
-.p2a{animation-name:p2a}.p2b{animation-name:p2b}.p2c{animation-name:p2c}.p2d{animation-name:p2d}.p2e{animation-name:p2e}
-.p3a{animation-name:p3a}.p3b{animation-name:p3b}.p3c{animation-name:p3c}.p3d{animation-name:p3d}
-@keyframes p1a{0%{opacity:0;transform:translateY(6px)}3%,100%{opacity:1;transform:none}}
-@keyframes p1b{0%,5%{opacity:0;transform:translateY(6px)}8%,100%{opacity:1;transform:none}}
-@keyframes p1c{0%,10%{opacity:0;transform:translateY(6px)}13%,100%{opacity:1;transform:none}}
-@keyframes p1d{0%,15%{opacity:0;transform:translateY(6px)}18%,100%{opacity:1;transform:none}}
-@keyframes p1e{0%,19%{opacity:0;transform:translateY(6px)}22%,100%{opacity:1;transform:none}}
-@keyframes p1f{0%,24%{opacity:0;transform:scale(.96)}27%,100%{opacity:1;transform:none}}
-@keyframes p2a{0%,35%{opacity:0;transform:scaleY(0)}39%,100%{opacity:1;transform:scaleY(1)}}
-@keyframes p2b{0%,39%{opacity:0;transform:scaleY(0)}43%,100%{opacity:1;transform:scaleY(1)}}
-@keyframes p2c{0%,43%{opacity:0;transform:translateY(6px)}46%,100%{opacity:1;transform:none}}
-@keyframes p2d{0%,50%{opacity:0;transform:translateY(6px)}53%,100%{opacity:1;transform:none}}
-@keyframes p2e{0%,55%{opacity:0;transform:translateY(6px)}58%,100%{opacity:1;transform:none}}
-@keyframes p3a{0%,68%{opacity:0;transform:translateY(6px)}71%,100%{opacity:1;transform:none}}
-@keyframes p3b{0%,72%{opacity:0;transform:translateY(6px)}75%,100%{opacity:1;transform:none}}
-@keyframes p3c{0%,77%{opacity:0;transform:translateY(6px)}80%,100%{opacity:1;transform:none}}
-@keyframes p3d{0%,82%{opacity:0;transform:scale(.96)}85%,100%{opacity:1;transform:none}}
-.grow{transform-box:fill-box;transform-origin:bottom}
+.chat{width:410px;flex:0 0 auto;border-right:1px solid var(--line);display:flex;flex-direction:column;background:#FFFFFF}
+.msgs{flex:1 1 auto;padding:16px 16px 8px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.m{max-width:92%;line-height:1.5}
+.m.u{align-self:flex-end;background:var(--cream);border:1px solid var(--line);border-radius:14px 14px 4px 14px;padding:9px 12px;color:var(--ink)}
+.m.a{align-self:flex-start;color:var(--ink);padding-left:26px;position:relative}
+.m.a::before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:var(--terra);box-shadow:inset 0 0 0 4px #F7D3C4}
+.m .k{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.m .k span{font-size:11.5px;border:1px solid var(--line);border-radius:9999px;padding:2px 9px;color:var(--text);background:#FFFFFF}
+.m .k span.r{color:var(--terra);border-color:#F2C6B6}
+.m .k span.g{color:var(--pass);border-color:#BFDCC7}
+.m b.f{color:var(--terra)} .m b.p{color:var(--pass)}
+.m .src{font-size:11px;color:var(--quiet);white-space:nowrap}
+.composer{margin:8px 14px 14px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--quiet);display:flex;align-items:center;gap:8px}
+.composer .caret{width:1.5px;height:16px;background:var(--terra);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.viewport{flex:1 1 auto;position:relative;background:var(--cream);min-width:0}
+.vl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vt{position:absolute;left:14px;top:12px;font-size:12px;color:var(--quiet);font-family:"IBM Plex Mono",monospace}
+.status{position:absolute;right:14px;top:10px;height:26px;width:150px}
+.status span{position:absolute;inset:0;border-radius:9999px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+.st0{background:#FFFFFF;border:1px solid var(--line);color:var(--quiet)}
+.st1{background:var(--wash);color:var(--terra)}
+.st2{background:var(--passwash);color:var(--pass)}
+.duo{display:flex;gap:14px;padding:44px 14px 14px;width:100%;height:100%}
+.duo>div{flex:1 1 0;background:#FFFFFF;border:1px solid var(--line);border-radius:12px;position:relative;display:flex;align-items:center;justify-content:center}
+.duo .cap2{position:absolute;left:12px;top:10px;font-size:12px;color:var(--quiet)}
+
+/* timing: one class per moment, all on the 15 s clock */
+.t{animation:15s infinite both}
+.t01{animation-name:t01}.t06{animation-name:t06}.t10{animation-name:t10}.t14{animation-name:t14}
+.t35{animation-name:t35}.t39{animation-name:t39}.t44{animation-name:t44}.t53{animation-name:t53}
+.t68{animation-name:t68}.t74{animation-name:t74}.t78{animation-name:t78}
+@keyframes t01{0%{opacity:0;transform:translateY(8px)}3%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes t06{0%,6%{opacity:0;transform:translateY(8px)}9%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes t10{0%,10%{opacity:0}13%,65%{opacity:1}67%,100%{opacity:0}}
+@keyframes t14{0%,14%{opacity:0}17%,65%{opacity:1}67%,100%{opacity:0}}
+@keyframes t35{0%,34%{opacity:0;transform:scaleY(0)}39%,65%{opacity:1;transform:scaleY(1)}67%,100%{opacity:0}}
+@keyframes t39{0%,38%{opacity:0;transform:scaleY(0)}43%,65%{opacity:1;transform:scaleY(1)}67%,100%{opacity:0}}
+@keyframes t44{0%,43%{opacity:0;transform:translateY(8px)}46%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes t53{0%,52%{opacity:0;transform:translateY(8px)}55%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes t68{0%,67%{opacity:0;transform:translateY(8px)}70%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes t74{0%,73%{opacity:0;transform:translateY(8px)}76%,97%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes t78{0%,76%{opacity:0}79%,97%{opacity:1}100%{opacity:0}}
+.st0{animation:st0 15s infinite both}.st1{animation:st1 15s infinite both}.st2{animation:st2 15s infinite both}
+@keyframes st0{0%,43%{opacity:1}44%,100%{opacity:0}}
+@keyframes st1{0%,43%{opacity:0}44%,52%{opacity:1}53%,100%{opacity:0}}
+@keyframes st2{0%,52%{opacity:0}53%,97%{opacity:1}100%{opacity:0}}
 .corr{animation:corr 15s infinite both}
-@keyframes corr{0%,43%{opacity:0;stroke:var(--terra)}46%,53%{opacity:1;stroke:var(--terra)}57%,100%{opacity:1;stroke:var(--pass)}}
-/* panels */
-.panel{background:#FFFFFF;border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.panel h4{margin:0 0 2px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet)}
-.rrow{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 10px}
-.rrow .src{margin-left:auto;font-size:11px;font-weight:700;color:var(--terra);letter-spacing:.04em}
-.tog{width:26px;height:15px;border-radius:9999px;background:var(--pass);position:relative;flex:0 0 auto}
-.tog::after{content:"";position:absolute;right:2px;top:2px;width:11px;height:11px;border-radius:50%;background:#FFFFFF}
-.field{border:1px solid var(--line);border-radius:10px;padding:9px 10px;color:var(--ink);line-height:1.55}
-.field small{display:block;color:var(--quiet);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{border-radius:9999px;padding:5px 11px;background:var(--wash);color:var(--terra);font-weight:500}
-.sw{display:flex;gap:6px}.sw i{flex:1 1 0;height:44px;border-radius:8px;display:block}
-.go{margin-top:auto;align-self:flex-start;background:var(--terra);color:#FFFFFF;border-radius:9999px;padding:9px 18px;font-weight:700}
-.view{flex:1 1 auto;background:var(--cream);border:1px solid var(--line);border-radius:12px;position:relative;display:flex;align-items:center;justify-content:center;min-width:0}
-.view .vt{position:absolute;left:12px;top:10px;color:var(--quiet);font-size:12px}
-.log{width:270px;flex:0 0 auto}
-.lg{border:1px solid var(--line);border-radius:10px;padding:10px}
-.lg .h{display:flex;justify-content:space-between;font-weight:700}
-.lg .i{color:var(--text);margin-top:4px;display:flex;justify-content:space-between;gap:8px}
-.lg .i em{font-style:normal;font-size:11px;color:var(--terra);font-weight:700}
-.lg.f{background:var(--wash)} .lg.f .h span:last-child{color:var(--terra)}
-.lg.p{background:var(--passwash)} .lg.p .h span:last-child{color:var(--pass)}
-.fixl{color:var(--text);padding:0 4px}
-.fixl b{color:var(--ink)}
-.col{display:flex;flex-direction:column;gap:16px;flex:1 1 auto;min-width:0}
-.views{display:flex;gap:16px;height:250px}
-.views .view{flex:1 1 0}
-table.opt{width:100%;border-collapse:collapse}
-table.opt th{text-align:left;font-weight:500;color:var(--quiet);font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line)}
-table.opt td{padding:8px;border-bottom:1px solid var(--line)}
-table.opt tr:last-child td{border-bottom:0}
-.ok{color:var(--pass);font-weight:700}
-.exp{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.exp span{border:1px solid var(--line);border-radius:9999px;padding:5px 12px;font-weight:500}
-.exp .hand{margin-left:auto;background:var(--ink);color:#FFFFFF;border-color:var(--ink)}
+@keyframes corr{0%,43%{opacity:0;stroke:var(--terra)}46%,52%{opacity:1;stroke:var(--terra)}55%,65%{opacity:1;stroke:var(--pass)}67%,100%{opacity:0}}
+.grow{transform-box:fill-box;transform-origin:bottom}
+.typing{animation:typing 15s infinite both;overflow:hidden}
+@keyframes typing{0%,39%{opacity:0;max-height:0}40%,43%{opacity:1;max-height:24px}44%,100%{opacity:0;max-height:0}}
+
 .stepsbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1040px;margin:18px auto 0;text-align:left}
 .sb{border-top:3px solid var(--line);padding-top:10px;color:var(--quiet)}
 .sb b{display:block;color:var(--ink);font-family:Fraunces,ui-serif,Georgia,serif;font-size:17px;font-weight:600}
@@ -136,9 +116,10 @@ table.opt tr:last-child td{border-bottom:0}
 @keyframes sb3{0%,65%{border-top-color:var(--line)}67%,99%{border-top-color:var(--terra)}100%{border-top-color:var(--line)}}
 .note{margin-top:14px;font-size:13px;color:var(--quiet)}
 @media (prefers-reduced-motion: reduce){
-  .s,.L1,.L2,.L3,.n1,.n2,.n3,.sb1,.sb2,.sb3,.corr{animation:none!important}
-  .L1,.L3{opacity:0;visibility:hidden}
-  .s,.corr{opacity:1;transform:none}
+  .t,.st0,.st1,.st2,.corr,.typing,.sb1,.sb2,.sb3,.composer .caret{animation:none!important}
+  .t,.corr{opacity:1;transform:none}
+  .t78,.st0,.st1,.typing{opacity:0}
+  .st2{opacity:1}
 }
 @media (max-width:700px){.stepsbar{grid-template-columns:minmax(0,1fr)}}
 
@@ -192,105 +173,79 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="shift"><s>Draw every line and volume</s><span aria-hidden="true">→</span><b>Define the standard</b></div>
 
     <div class="fit" id="fit">
-      <div class="app" id="app" role="img" aria-label="ARCHLOOP interface concept: define the standard, run self-checking design rounds, get plans, views and exports">
+      <div class="app" id="app" role="img" aria-label="ARCHLOOP interface concept: the architect talks to the AI on the left while the building is created and checked live on the right">
         <div class="tbar">
           <div class="dots"><i></i><i></i><i></i></div>
-          <span class="ttl">ARCHLOOP</span><span class="sub">/ Clinic, two storeys</span>
-          <div class="right"><span class="tag2">Option A · masonry</span><span class="tag2">Option B · timber</span></div>
+          <div class="tabs"><span class="on">clinic</span><span>DESIGN.md</span><span>rules/</span><span>model.ifc</span></div>
         </div>
         <div class="body">
-          <div class="side">
-            <div class="nav n1"><span class="n">1</span>Standard</div>
-            <div class="nav n2"><span class="n">2</span>Rounds</div>
-            <div class="nav n3"><span class="n">3</span>Results</div>
-            <div class="files"><b>Project</b>DESIGN.md<br>rules/ DIN 18040-1<br>rules/ MBO<br>style.md</div>
+          <div class="chat">
+            <div class="msgs">
+              <div class="m u t t01">A neighbourhood clinic, two storeys, on this 40 × 30 m plot. Timber, calm, daylight in the waiting area. Barrier-free.</div>
+              <div class="m a t t06">Standard set. I'll check every round against:
+                <div class="k"><span>DIN 18040-1</span><span>MBO § 6 setbacks</span><span>Brief areas</span><span>Style: timber, calm</span></div>
+              </div>
+              <div class="m a typing" style="color:var(--quiet)">Generating round 1…</div>
+              <div class="m a t t44">Round 1: <b class="f">23 of 48 checks fail.</b> Doors 850 mm and corridor 1300 mm are below the minimum. <span class="src">DIN 18040-1</span></div>
+              <div class="m a t t53">Revised corridor to 1800 mm, doors to 900 mm. Round 2: <b class="p">48 of 48 pass</b>, plus 135 geometry and 20 brief checks.</div>
+              <div class="m u t t68">Show me the plan, and the timber option.</div>
+              <div class="m a t t74">Here they are. Both options pass.
+                <div class="k"><span class="g">✓ plan</span><span class="g">✓ 3D view</span><span class="g">✓ IFC4</span><span class="g">✓ OpenUSD</span></div>
+              </div>
+            </div>
+            <div class="composer"><span class="caret"></span>Ask for a change…</div>
           </div>
-          <div class="main">
 
-            <div class="layer L1">
-              <div class="panel" style="flex:1 1 0">
-                <h4>Rules</h4>
-                <div class="rrow s p1a"><span class="tog"></span>Doors ≥ 90 cm clear width<span class="src">DIN 18040-1</span></div>
-                <div class="rrow s p1b"><span class="tog"></span>Step-free routes to every room<span class="src">DIN 18040-1</span></div>
-                <div class="rrow s p1c"><span class="tog"></span>Setback 0.4 H, at least 3 m<span class="src">MBO § 6</span></div>
-                <div class="rrow s p1d"><span class="tog"></span>Every room at its brief area<span class="src">BRIEF</span></div>
-              </div>
-              <div class="panel" style="flex:1 1 0">
-                <h4>Brief and style</h4>
-                <div class="field s p1a"><small>Brief</small>Neighbourhood clinic · 2 storeys · plot 40 × 30 m · reception, waiting, treatment rooms, accessible WCs</div>
-                <div class="chips s p1e"><span>Timber</span><span>Calm</span><span>Daylight in waiting</span><span>Double-loaded</span></div>
-                <div class="sw s p1e"><i style="background:#D9C3A5"></i><i style="background:#EDE6DA"></i><i style="background:#9C8A70"></i><i style="background:#F6F1E8"></i></div>
-                <div class="go s p1f">Run rounds →</div>
-              </div>
+          <div class="viewport">
+            <span class="vt">live model</span>
+            <div class="status"><span class="st0">checks waiting</span><span class="st1">23 of 48 fail</span><span class="st2">✓ all checks pass</span></div>
+
+            <div class="vl">
+              <svg viewBox="0 0 560 420" width="92%" aria-hidden="true">
+                <g class="t t10">
+                  <polygon points="40,250 330,370 520,272 230,152" fill="#EFEADF" stroke="#A8A29E" stroke-width="1.2"/>
+                  <polygon points="96,248 322,342 460,271 234,177" fill="none" stroke="#B33F1F" stroke-width="1.2" stroke-dasharray="6 5"/>
+                </g>
+                <text class="t t14" x="62" y="300" font-family="DM Sans, sans-serif" font-size="13" fill="#78716C">plot 40 × 30 m</text>
+                <text class="t t14" x="404" y="314" font-family="DM Sans, sans-serif" font-size="13" fill="#B33F1F">setback 3 m</text>
+                <g class="t t35 grow"><polygon points="130,250 300,320 410,263 240,193" fill="#EDE9E2" stroke="#78716C"/><polygon points="130,250 300,320 300,262 130,192" fill="#E3DED5" stroke="#78716C"/><polygon points="300,320 410,263 410,205 300,262" fill="#D6D0C5" stroke="#78716C"/></g>
+                <g class="t t39 grow"><polygon points="130,192 300,262 300,204 130,134" fill="#E3DED5" stroke="#78716C"/><polygon points="300,262 410,205 410,147 300,204" fill="#D6D0C5" stroke="#78716C"/><polygon points="130,134 300,204 410,147 240,77" fill="#F5F2EC" stroke="#78716C"/></g>
+                <line class="corr" x1="185" y1="105" x2="355" y2="175" stroke-width="3" stroke-dasharray="8 6"/>
+              </svg>
             </div>
 
-            <div class="layer L2">
-              <div class="view">
-                <span class="vt">Massing · live</span>
-                <svg viewBox="0 0 420 300" width="92%" aria-hidden="true">
-                  <g class="s p2a grow"><polygon points="70,190 270,272 360,226 160,144" fill="#EDE9E2" stroke="#78716C"/><polygon points="70,190 270,272 270,222 70,140" fill="#E3DED5" stroke="#78716C"/><polygon points="270,272 360,226 360,176 270,222" fill="#D6D0C5" stroke="#78716C"/></g>
-                  <g class="s p2b grow"><polygon points="70,140 270,222 270,172 70,90" fill="#E3DED5" stroke="#78716C"/><polygon points="270,222 360,176 360,126 270,172" fill="#D6D0C5" stroke="#78716C"/><polygon points="70,90 270,172 360,126 160,44" fill="#F5F2EC" stroke="#78716C"/></g>
-                  <line class="corr" x1="115" y1="67" x2="315" y2="149" stroke-width="3" stroke-dasharray="7 5"/>
-                </svg>
-              </div>
-              <div class="panel log">
-                <h4>Round log</h4>
-                <div class="lg f s p2c">
-                  <div class="h"><span>Round 1</span><span>23 of 48 fail</span></div>
-                  <div class="i">Door 850 mm<em>DIN 18040-1</em></div>
-                  <div class="i">Corridor 1300 mm<em>DIN 18040-1</em></div>
+            <div class="vl t t78">
+              <div class="duo">
+                <div><span class="cap2">plan · ground floor</span>
+                  <svg viewBox="0 0 300 180" width="88%" aria-hidden="true">
+                    <rect x="20" y="20" width="260" height="140" fill="#FFFFFF" stroke="#1C1917" stroke-width="3"/>
+                    <rect x="20" y="78" width="260" height="24" fill="#FBEDE6"/>
+                    <line x1="20" y1="78" x2="280" y2="78" stroke="#1C1917" stroke-width="2"/><line x1="20" y1="102" x2="280" y2="102" stroke="#1C1917" stroke-width="2"/>
+                    <line x1="85" y1="20" x2="85" y2="78" stroke="#1C1917" stroke-width="2"/><line x1="150" y1="20" x2="150" y2="78" stroke="#1C1917" stroke-width="2"/><line x1="215" y1="20" x2="215" y2="78" stroke="#1C1917" stroke-width="2"/>
+                    <line x1="110" y1="102" x2="110" y2="160" stroke="#1C1917" stroke-width="2"/><line x1="200" y1="102" x2="200" y2="160" stroke="#1C1917" stroke-width="2"/>
+                    <text x="150" y="94" text-anchor="middle" font-size="10" fill="#B33F1F" font-family="DM Sans, sans-serif">corridor 1800</text>
+                    <text x="65" y="136" text-anchor="middle" font-size="10" fill="#57534E" font-family="DM Sans, sans-serif">waiting</text>
+                  </svg>
                 </div>
-                <div class="fixl s p2d">AI revises: corridor <b>1800 mm</b>, doors <b>900 mm</b></div>
-                <div class="lg p s p2e">
-                  <div class="h"><span>Round 2</span><span>48 of 48 pass</span></div>
-                  <div class="i">Geometry 135 · brief 20</div>
+                <div><span class="cap2">option B · timber</span>
+                  <svg viewBox="0 0 300 180" width="88%" aria-hidden="true">
+                    <polygon points="40,110 170,160 250,124 120,74" fill="#E9DCCB" stroke="#78716C"/>
+                    <polygon points="40,110 170,160 170,104 40,54" fill="#D9C3A5" stroke="#78716C"/>
+                    <polygon points="170,160 250,124 250,68 170,104" fill="#C7AB86" stroke="#78716C"/>
+                    <polygon points="40,54 170,104 250,68 120,18" fill="#F2E8DA" stroke="#78716C"/>
+                    <g stroke="#9C8A70"><line x1="60" y1="92" x2="60" y2="68"/><line x1="85" y1="101" x2="85" y2="77"/><line x1="110" y1="111" x2="110" y2="87"/><line x1="135" y1="120" x2="135" y2="96"/></g>
+                  </svg>
                 </div>
-              </div>
-            </div>
-
-            <div class="layer L3">
-              <div class="col">
-                <div class="views">
-                  <div class="view s p3a"><span class="vt">Plan · ground floor</span>
-                    <svg viewBox="0 0 300 180" width="86%" aria-hidden="true">
-                      <rect x="20" y="20" width="260" height="140" fill="#FFFFFF" stroke="#1C1917" stroke-width="3"/>
-                      <rect x="20" y="78" width="260" height="24" fill="#FBEDE6"/>
-                      <line x1="20" y1="78" x2="280" y2="78" stroke="#1C1917" stroke-width="2"/><line x1="20" y1="102" x2="280" y2="102" stroke="#1C1917" stroke-width="2"/>
-                      <line x1="85" y1="20" x2="85" y2="78" stroke="#1C1917" stroke-width="2"/><line x1="150" y1="20" x2="150" y2="78" stroke="#1C1917" stroke-width="2"/><line x1="215" y1="20" x2="215" y2="78" stroke="#1C1917" stroke-width="2"/>
-                      <line x1="110" y1="102" x2="110" y2="160" stroke="#1C1917" stroke-width="2"/><line x1="200" y1="102" x2="200" y2="160" stroke="#1C1917" stroke-width="2"/>
-                      <text x="150" y="94" text-anchor="middle" font-size="10" fill="#B33F1F" font-family="DM Sans, sans-serif">corridor 1800</text>
-                      <text x="65" y="136" text-anchor="middle" font-size="10" fill="#57534E" font-family="DM Sans, sans-serif">waiting</text>
-                    </svg>
-                  </div>
-                  <div class="view s p3b"><span class="vt">3D view · option B timber</span>
-                    <svg viewBox="0 0 300 180" width="86%" aria-hidden="true">
-                      <polygon points="40,110 170,160 250,124 120,74" fill="#E9DCCB" stroke="#78716C"/>
-                      <polygon points="40,110 170,160 170,104 40,54" fill="#D9C3A5" stroke="#78716C"/>
-                      <polygon points="170,160 250,124 250,68 170,104" fill="#C7AB86" stroke="#78716C"/>
-                      <polygon points="40,54 170,104 250,68 120,18" fill="#F2E8DA" stroke="#78716C"/>
-                      <g stroke="#9C8A70"><line x1="60" y1="92" x2="60" y2="68"/><line x1="85" y1="101" x2="85" y2="77"/><line x1="110" y1="111" x2="110" y2="87"/><line x1="135" y1="120" x2="135" y2="96"/></g>
-                    </svg>
-                  </div>
-                </div>
-                <div class="panel s p3c">
-                  <table class="opt">
-                    <tr><th>Option</th><th>Checks</th><th>Materials, EUR/m²*</th><th>Carbon, t CO2e*</th></tr>
-                    <tr><td><b>A · masonry</b></td><td class="ok">✓ 203 pass</td><td>187</td><td>97.3</td></tr>
-                    <tr><td><b>B · timber</b></td><td class="ok">✓ 203 pass</td><td>480</td><td>56.5</td></tr>
-                  </table>
-                </div>
-                <div class="exp s p3d"><span>Plan PDF</span><span>IFC4</span><span>OpenUSD</span><span style="color:var(--quiet);border:0">* illustrative data</span><span class="hand">Hand over to client →</span></div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
     <div class="stepsbar">
-      <div class="sb sb1"><b>1 · Define the standard</b>Codes, brief and style, once.</div>
-      <div class="sb sb2"><b>2 · AI generates and checks itself</b>Round by round, until it passes.</div>
-      <div class="sb sb3"><b>3 · Visualised and finalised</b>Plans, views and models, automatically.</div>
+      <div class="sb sb1"><b>1 · Define the standard</b>Say what you want, in your words.</div>
+      <div class="sb sb2"><b>2 · AI generates and checks itself</b>The building appears and fixes itself.</div>
+      <div class="sb sb3"><b>3 · Visualised and finalised</b>Plans, views and models, on request.</div>
     </div>
     <p class="note">Interface concept. Checks and numbers from the open-core demo.</p>
     <script>
