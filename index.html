@@ -96,13 +96,24 @@ nav .pill{margin-left:auto;min-height:40px;padding:0 18px;font-size:15px;white-s
 @keyframes t53{0%,52%{opacity:0;transform:translateY(8px)}55%,97%{opacity:1;transform:none}100%{opacity:0}}
 @keyframes t68{0%,67%{opacity:0;transform:translateY(8px)}70%,97%{opacity:1;transform:none}100%{opacity:0}}
 @keyframes t74{0%,73%{opacity:0;transform:translateY(8px)}76%,97%{opacity:1;transform:none}100%{opacity:0}}
-@keyframes t78{0%,76%{opacity:0}79%,97%{opacity:1}100%{opacity:0}}
+@keyframes t78{0%,65%{opacity:0}68%,97%{opacity:1}100%{opacity:0}}
 .st0{animation:st0 15s infinite both}.st1{animation:st1 15s infinite both}.st2{animation:st2 15s infinite both}
 @keyframes st0{0%,43%{opacity:1}44%,100%{opacity:0}}
 @keyframes st1{0%,43%{opacity:0}44%,52%{opacity:1}53%,100%{opacity:0}}
 @keyframes st2{0%,52%{opacity:0}53%,97%{opacity:1}100%{opacity:0}}
-.corr{animation:corr 15s infinite both}
-@keyframes corr{0%,43%{opacity:0;stroke:var(--terra)}46%,52%{opacity:1;stroke:var(--terra)}55%,65%{opacity:1;stroke:var(--pass)}67%,100%{opacity:0}}
+.bn1{animation:bn1 15s infinite both}.bn2{animation:bn2 15s infinite both}
+@keyframes bn1{0%,43%{opacity:0}45%,51%{opacity:1}53%,100%{opacity:0}}
+@keyframes bn2{0%,51%{opacity:0}53%,65%{opacity:1}67%,100%{opacity:0}}
+.loopbar{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--quiet);white-space:nowrap;animation:lb 15s infinite both}
+.loopbar .ls{padding:5px 11px;border-radius:9999px;border:1px solid var(--line);background:#FFFFFF}
+.loopbar .lr{position:relative;width:62px;height:16px}.loopbar .lr i{position:absolute;inset:0;font-style:normal;color:var(--ink)}
+.lg{animation:lg 15s infinite}.lc{animation:lc 15s infinite}.lf{animation:lf 15s infinite}.r1{animation:r1 15s infinite both}.r2{animation:r2 15s infinite both}
+@keyframes lb{0%,30%{opacity:0}33%,65%{opacity:1}67%,100%{opacity:0}}
+@keyframes lg{0%,33%{background:#FFFFFF;color:var(--quiet)}34%,42%{background:var(--terra);color:#FFFFFF}43%,50%{background:#FFFFFF;color:var(--quiet)}51%,53%{background:var(--terra);color:#FFFFFF}54%,100%{background:#FFFFFF;color:var(--quiet)}}
+@keyframes lc{0%,42%{background:#FFFFFF;color:var(--quiet)}43%,47%{background:var(--wash);color:var(--terra)}48%,53%{background:#FFFFFF;color:var(--quiet)}54%,100%{background:var(--passwash);color:var(--pass)}}
+@keyframes lf{0%,47%{background:#FFFFFF;color:var(--quiet)}48%,50%{background:var(--terra);color:#FFFFFF}51%,100%{background:#FFFFFF;color:var(--quiet)}}
+@keyframes r1{0%,50%{opacity:1}51%,100%{opacity:0}}
+@keyframes r2{0%,50%{opacity:0}51%,100%{opacity:1}}
 .grow{transform-box:fill-box;transform-origin:bottom}
 .typing{animation:typing 15s infinite both;overflow:hidden}
 @keyframes typing{0%,39%{opacity:0;max-height:0}40%,43%{opacity:1;max-height:24px}44%,100%{opacity:0;max-height:0}}
@@ -116,9 +127,10 @@ nav .pill{margin-left:auto;min-height:40px;padding:0 18px;font-size:15px;white-s
 @keyframes sb3{0%,65%{border-top-color:var(--line)}67%,99%{border-top-color:var(--terra)}100%{border-top-color:var(--line)}}
 .note{margin-top:14px;font-size:13px;color:var(--quiet)}
 @media (prefers-reduced-motion: reduce){
-  .t,.st0,.st1,.st2,.corr,.typing,.sb1,.sb2,.sb3,.composer .caret{animation:none!important}
-  .t,.corr{opacity:1;transform:none}
-  .t78,.st0,.st1,.typing{opacity:0}
+  .t,.st0,.st1,.st2,.bn1,.bn2,.loopbar,.loopbar *,.typing,.sb1,.sb2,.sb3,.composer .caret{animation:none!important}
+  .t,.bn2,.loopbar{opacity:1;transform:none}.loopbar{transform:translateX(-50%)}
+  .t78,.st0,.st1,.typing,.bn1,.r1{opacity:0}
+  .lc{background:var(--passwash)!important;color:var(--pass)!important}
   .st2{opacity:1}
 }
 @media (max-width:700px){.stepsbar{grid-template-columns:minmax(0,1fr)}}
@@ -166,6 +178,7 @@ section{padding:84px 0}
 .flow svg.tall{display:none}
 @media (max-width:560px){.flow svg.wide{display:none}.flow svg.tall{display:block;max-width:340px;margin:0 auto}}
 .talks{margin:28px auto 0;max-width:720px;font-size:14px;color:var(--quiet)}
+.teach{margin:32px auto 0;max-width:720px;font-size:16px;color:var(--text)}.teach b{color:var(--ink)}.teach small{display:block;margin-top:2px;font-size:13px;color:var(--quiet)}.teach span{display:block;margin-top:8px;font-size:18px;font-family:Fraunces,ui-serif,Georgia,serif;font-style:italic;color:var(--terra)}
 .pain .x{width:30px;height:30px;border-radius:50%;background:var(--wash);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
 
 .band{background:var(--terra);color:#FFFFFF;clip-path:polygon(0 8%,100% 0,100% 100%,0 100%);padding:110px 0 80px}
@@ -248,9 +261,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
                 <text class="t t14" x="404" y="314" font-family="DM Sans, sans-serif" font-size="13" fill="#B33F1F">setback 3 m</text>
                 <g class="t t35 grow"><polygon points="130,250 300,320 410,263 240,193" fill="#EDE9E2" stroke="#78716C"/><polygon points="130,250 300,320 300,262 130,192" fill="#E3DED5" stroke="#78716C"/><polygon points="300,320 410,263 410,205 300,262" fill="#D6D0C5" stroke="#78716C"/></g>
                 <g class="t t39 grow"><polygon points="130,192 300,262 300,204 130,134" fill="#E3DED5" stroke="#78716C"/><polygon points="300,262 410,205 410,147 300,204" fill="#D6D0C5" stroke="#78716C"/><polygon points="130,134 300,204 410,147 240,77" fill="#F5F2EC" stroke="#78716C"/></g>
-                <line class="corr" x1="185" y1="105" x2="355" y2="175" stroke-width="3" stroke-dasharray="8 6"/>
+                <g class="bn1"><polygon points="180.6,107.8 350.6,177.8 359.4,173.2 189.4,103.2" fill="#F4C7B8" stroke="#B33F1F" stroke-width="1.5"/>
+                  <text x="318" y="112" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="#B33F1F">corridor 1300 mm ✗</text></g>
+                <g class="bn2"><polygon points="174,111.2 344,181.2 366,169.8 196,99.8" fill="#CFE6D6" stroke="#2F6B3E" stroke-width="1.5"/>
+                  <text x="318" y="112" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="#2F6B3E">corridor 1800 mm ✓</text></g>
               </svg>
             </div>
+
+            <div class="loopbar" aria-hidden="true"><span class="lr"><i class="r1">Round 1</i><i class="r2">Round 2</i></span><span class="ls lg">Generate</span>→<span class="ls lc">Check</span>→<span class="ls lf">Fix</span>↻</div>
 
             <div class="vl t t78">
               <div class="duo">
@@ -337,6 +355,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <svg class="wide" viewBox="0 0 480 250" role="img"><title>ArchiLoops: from your standard, each round is generated, checked and fixed until every check passes; the architect steers; plans, 3D and IFC come out</title><defs><marker id="ak3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker><marker id="ar3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B33F1F"/></marker><marker id="ag3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2F6B3E"/></marker></defs><circle cx="210" cy="125" r="84" fill="none" stroke="#B33F1F" stroke-width="1.6"/><path d="M-7,-6 L7,0 L-7,6 z" fill="#B33F1F" transform="translate(282.7,83.0) rotate(60)"/><path d="M-7,-6 L7,0 L-7,6 z" fill="#B33F1F" transform="translate(210.0,209.0) rotate(180)"/><path d="M-7,-6 L7,0 L-7,6 z" fill="#B33F1F" transform="translate(137.3,83.0) rotate(-60)"/><rect x="168" y="24" width="84" height="34" rx="10" fill="#FFFFFF" stroke="#A8A29E" stroke-width="1.4"/><text x="210.0" y="45.7" text-anchor="middle" font-size="13" fill="#1C1917">Generate</text><rect x="241" y="150" width="84" height="34" rx="10" fill="#E7F2EA" stroke="#2F6B3E" stroke-width="1.4"/><text x="283.0" y="171.7" text-anchor="middle" font-size="13" fill="#2F6B3E" font-weight="700">Check</text><rect x="95" y="150" width="84" height="34" rx="10" fill="#FFFFFF" stroke="#A8A29E" stroke-width="1.4"/><text x="137.0" y="171.7" text-anchor="middle" font-size="13" fill="#1C1917">Fix</text><text x="210" y="118" text-anchor="middle" font-size="13" fill="#1C1917" font-weight="700">Your standard</text><text x="210" y="136" text-anchor="middle" font-size="12" fill="#57534E">codes · brief · style</text><text x="20" y="104" font-size="12" fill="#57534E">You steer</text><line x1="20" y1="114" x2="122" y2="114" stroke="#78716C" stroke-width="1.4" marker-end="url(#ak3)"/><line x1="296" y1="114" x2="342" y2="114" stroke="#2F6B3E" stroke-width="1.6" marker-end="url(#ag3)"/><rect x="346" y="90" width="120" height="48" rx="10" fill="#FFFFFF" stroke="#2F6B3E" stroke-width="1.4"/><text x="406.0" y="118.7" text-anchor="middle" font-size="13" fill="#2F6B3E" font-weight="700">Plans · 3D · IFC</text><text x="406" y="158" text-anchor="middle" font-size="12" fill="#2F6B3E">when every</text><text x="406" y="174" text-anchor="middle" font-size="12" fill="#2F6B3E">check passes</text><text x="210" y="236" text-anchor="middle" font-size="13" fill="#57534E">round after round, in one loop</text></svg><svg class="tall" viewBox="0 0 300 400" role="img"><title>ArchiLoops: from your standard, each round is generated, checked and fixed until every check passes; the architect steers; plans, 3D and IFC come out</title><defs><marker id="ak4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker><marker id="ar4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B33F1F"/></marker><marker id="ag4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2F6B3E"/></marker></defs><circle cx="160" cy="140" r="92" fill="none" stroke="#B33F1F" stroke-width="1.6"/><path d="M-8,-7 L8,0 L-8,7 z" fill="#B33F1F" transform="translate(239.7,94.0) rotate(60)"/><path d="M-8,-7 L8,0 L-8,7 z" fill="#B33F1F" transform="translate(160.0,232.0) rotate(180)"/><path d="M-8,-7 L8,0 L-8,7 z" fill="#B33F1F" transform="translate(80.3,94.0) rotate(-60)"/><rect x="110" y="26" width="100" height="38" rx="10" fill="#FFFFFF" stroke="#A8A29E" stroke-width="1.4"/><text x="160.0" y="50.4" text-anchor="middle" font-size="15" fill="#1C1917">Generate</text><rect x="192" y="168" width="96" height="38" rx="10" fill="#E7F2EA" stroke="#2F6B3E" stroke-width="1.4"/><text x="240.0" y="192.4" text-anchor="middle" font-size="15" fill="#2F6B3E" font-weight="700">Check</text><rect x="32" y="168" width="96" height="38" rx="10" fill="#FFFFFF" stroke="#A8A29E" stroke-width="1.4"/><text x="80.0" y="192.4" text-anchor="middle" font-size="15" fill="#1C1917">Fix</text><text x="160" y="134" text-anchor="middle" font-size="15" fill="#1C1917" font-weight="700">Your standard</text><text x="160" y="154" text-anchor="middle" font-size="13" fill="#57534E">codes · brief · style</text><text x="6" y="98" font-size="13" fill="#57534E">You steer</text><line x1="6" y1="108" x2="72" y2="108" stroke="#78716C" stroke-width="1.4" marker-end="url(#ak4)"/><line x1="160" y1="236" x2="160" y2="282" stroke="#2F6B3E" stroke-width="1.6" marker-end="url(#ag4)"/><rect x="70" y="286" width="180" height="46" rx="10" fill="#FFFFFF" stroke="#2F6B3E" stroke-width="1.4"/><text x="160.0" y="314.4" text-anchor="middle" font-size="15" fill="#2F6B3E" font-weight="700">Plans · 3D · IFC</text><text x="160" y="358" text-anchor="middle" font-size="14" fill="#2F6B3E">when every check passes</text><text x="160" y="386" text-anchor="middle" font-size="14" fill="#57534E">round after round, in one loop</text></svg>
       </div>
     </div>
+    <p class="teach"><b>And between projects, the standard learns.</b> What one project teaches goes back into the office standard, so the next one starts further ahead. Planned, and tested in the pilots.<span>“What if every building taught the next one?”</span><small>Shicong Cao, AI in AEC, Helsinki 2026</small></p>
     <p class="talks">Shicong Cao has spoken on AI in architecture at the AIA Conference on Architecture (Boston, 2025), BIG SEE (Portorož, 2025), Buildtworlds (Stuttgart, 2025), AI in AEC (Helsinki, 2026) and NIBS Building Innovation (Washington DC, 2026).</p>
   </div>
 </section>
